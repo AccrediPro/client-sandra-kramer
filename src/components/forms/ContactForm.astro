@@ -66,9 +66,15 @@ const retryId = `${id}-retry`;
       name="message"
       label="Your Message"
       required
-      placeholder="Tell me a bit about yourself and what you're hoping to achieve. Are you looking for work-life balance, a career change, better health, or more confidence? What challenges are you facing?"
+      placeholder="Tell me a bit about your health situation. What symptoms or health issues have you been dealing with? How long has this been going on? What have you tried so far?"
       rows={6}
     />
+
+    <!-- Honeypot spam protection: hidden from humans, filled by bots -->
+    <div aria-hidden="true" style="display:none;">
+      <label for="company_fax">Leave this blank</label>
+      <input type="text" id="company_fax" name="company_fax" tabindex="-1" autocomplete="off" />
+    </div>
 
     <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
       <p class="text-sm text-gray-500 font-body">
@@ -174,7 +180,7 @@ const retryId = `${id}-retry`;
       return {
         isValid: Object.keys(errors).length === 0,
         errors,
-        data: { name, email, phone: formData.get('phone')?.toString().trim() || '', message }
+        data: { name, email, phone: formData.get('phone')?.toString().trim() || '', message, company_fax: formData.get('company_fax')?.toString() || '' }
       };
     }
 

@@ -8,7 +8,7 @@ const pullquote = siteConfig.bio.pullquote;
 const storyPreview = siteConfig.bio.storyPreview;
 ---
 
-<section class="py-14 md:py-24 bg-white overflow-hidden" style="border-top: 1px solid rgba(201,169,110,0.2);">
+<section class="py-14 md:py-24 bg-white overflow-hidden">
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 items-center">
 
@@ -17,23 +17,23 @@ const storyPreview = siteConfig.bio.storyPreview;
         <div class="relative mx-8 sm:mx-12 lg:mx-0">
           <!-- Decorative offset background -->
           <div class="absolute -top-4 -left-4 w-full h-full bg-primary-100 rounded-2xl"></div>
-          <div class="absolute -bottom-4 -right-4 w-full h-full rounded-2xl" style="background-color: rgba(201,169,110,0.25);"></div>
+          <div class="absolute -bottom-4 -right-4 w-full h-full rounded-2xl" style="background-color: rgba(232,180,184,0.25);"></div>
 
-          <!-- Coach portrait — full image visible, no cropping -->
+          <!-- Wellness imagery -->
           <img
             src={siteConfig.images.portrait}
-            alt={`${siteConfig.coach.name} — Certified Professional Coach and ${siteConfig.stats.yearsExperience} year healthcare veteran`}
+            alt="Natural herbs and wellness representing functional medicine and root-cause healing"
             width="1024" height="1024"
             decoding="async"
             class="relative w-56 sm:w-72 md:w-80 lg:w-96 rounded-2xl shadow-xl ring-4 ring-white"
-            style="display: block; width: 100%; height: auto; object-fit: contain;"
+            style="display: block; width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/5;"
             loading="lazy"
           />
 
           <!-- Floating credential badge -->
-          <div class="absolute -bottom-4 -right-4 bg-accent-800 text-white rounded-xl px-3 py-2 md:px-4 md:py-3 shadow-lg text-center">
-            <p class="font-heading font-bold text-xl md:text-2xl leading-none" style="color: #C9A96E;">40+</p>
-            <p class="font-body text-xs text-accent-200 mt-0.5">Years Experience</p>
+          <div class="absolute -bottom-4 -right-4 rounded-xl px-3 py-2 md:px-4 md:py-3 shadow-lg text-center" style="background-color: #3b5540;">
+            <p class="font-heading font-bold text-xl md:text-2xl leading-none" style="color: #E8B4B8;">IHMC</p>
+            <p class="font-body text-xs mt-0.5" style="color: #e0ede2;">Certified</p>
           </div>
         </div>
       </div>
@@ -44,9 +44,9 @@ const storyPreview = siteConfig.bio.storyPreview;
           About Me
         </span>
 
-        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold leading-tight" style="color: #1B3A5C; letter-spacing: -0.02em; line-height: 1.1;">
-          Your Partner in <br class="hidden md:block" />
-          <span style="color: #98D8AA;">Transformation &amp; Success</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary-900 leading-tight" style="letter-spacing: -0.02em; line-height: 1.1;">
+          I've Been My Own<br class="hidden md:block" />
+          <span class="text-primary-600">First Client</span>
         </h2>
 
         <p class="mt-6 text-lg font-body" style="color: #3a3a3a; line-height: 1.7;">
@@ -54,8 +54,8 @@ const storyPreview = siteConfig.bio.storyPreview;
         </p>
 
         <!-- Pullquote -->
-        <blockquote class="mt-6 pl-6 border-l-[3px]" style="border-left: 3px solid #C9A96E;">
-          <p class="text-xl font-heading italic leading-relaxed" style="color: #1B3A5C;">
+        <blockquote class="mt-6 pl-6" style="border-left: 3px solid #E8B4B8;">
+          <p class="text-xl font-heading italic leading-relaxed text-primary-900">
             "{pullquote}"
           </p>
           <cite class="mt-2 block text-sm font-body text-gray-500 not-italic">— {siteConfig.coach.name}</cite>

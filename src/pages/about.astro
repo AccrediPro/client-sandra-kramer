@@ -13,13 +13,12 @@ const coachTitle = siteConfig.coach.title;
 const storyParagraphs = siteConfig.bio.storyParagraphs;
 const differentiator = siteConfig.bio.differentiator;
 const certifications = siteConfig.certifications;
-const approachItems = siteConfig.approachItems;
 const holisticAspects = siteConfig.bio.holisticAspects;
 ---
 
 <BaseLayout
   title={`About ${coachName} | ${coachTitle}`}
-  description={`${siteConfig.coach.name} brings ${siteConfig.stats.yearsExperience} years of healthcare and leadership experience to coaching. Discover her proven 5-step approach to work-life balance.`}
+  description={`Learn about ${coachName}, ${coachTitle}. Discover my personal journey from health struggles to helping others find root-cause solutions through functional medicine.`}
   page="about"
 >
   <Header slot="header" />
@@ -36,24 +35,24 @@ const holisticAspects = siteConfig.bio.holisticAspects;
         <div class="flex justify-center lg:justify-start order-2 lg:order-1" data-aos="fade-right">
           <div class="relative mx-8 sm:mx-12 lg:mx-0">
             <!-- Decorative background shapes -->
-            <div class="absolute -top-5 -left-5 w-full h-full rounded-2xl transform -rotate-3" style="background-color: rgba(152,216,170,0.35);"></div>
-            <div class="absolute -bottom-5 -right-5 w-full h-full rounded-2xl transform rotate-3" style="background-color: rgba(201,169,110,0.25);"></div>
+            <div class="absolute -top-5 -left-5 w-full h-full rounded-2xl transform -rotate-3" style="background-color: rgba(122,158,126,0.35);"></div>
+            <div class="absolute -bottom-5 -right-5 w-full h-full rounded-2xl transform rotate-3" style="background-color: rgba(232,180,184,0.25);"></div>
 
-            <!-- Coach portrait — full image, no cropping -->
+            <!-- Wellness imagery -->
             <img
               src={siteConfig.images.portrait}
-              alt={`${siteConfig.coach.name} — Certified Professional Coach and ${siteConfig.stats.yearsExperience} year healthcare veteran`}
+              alt="Natural wellness and functional medicine representing Sandra Kramer's holistic approach"
               width="1024" height="1024"
               decoding="async"
               class="relative w-56 sm:w-72 md:w-80 lg:w-96 rounded-2xl shadow-2xl ring-4 ring-white"
-              style="display: block; width: 100%; height: auto; object-fit: contain;"
+              style="display: block; width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/5;"
               loading="eager"
             />
 
             <!-- Floating credential badge -->
-            <div class="absolute -bottom-4 -right-4 rounded-xl px-4 py-3 shadow-lg text-center" style="background-color: #1B3A5C;">
-              <p class="font-heading font-bold text-2xl leading-none" style="color: #C9A96E;">40+</p>
-              <p class="font-body text-xs mt-0.5" style="color: #98D8AA;">Years Experience</p>
+            <div class="absolute -bottom-4 -right-4 rounded-xl px-4 py-3 shadow-lg text-center" style="background-color: #3b5540;">
+              <p class="font-heading font-bold text-2xl leading-none" style="color: #E8B4B8;">IHMC</p>
+              <p class="font-body text-xs mt-0.5" style="color: #e0ede2;">Certified</p>
             </div>
           </div>
         </div>
@@ -83,16 +82,12 @@ const holisticAspects = siteConfig.bio.holisticAspects;
           <!-- Quick stats -->
           <div class="mt-8 flex flex-wrap gap-6">
             <div class="text-center">
-              <p class="text-3xl md:text-4xl font-heading font-bold text-primary-600">40+</p>
-              <p class="text-sm text-gray-600 font-body">Years in Healthcare</p>
+              <p class="text-3xl md:text-4xl font-heading font-bold text-primary-600">1</p>
+              <p class="text-sm text-gray-600 font-body">Certification</p>
             </div>
             <div class="text-center">
-              <p class="text-3xl md:text-4xl font-heading font-bold text-primary-600">3</p>
-              <p class="text-sm text-gray-600 font-body">Certifications</p>
-            </div>
-            <div class="text-center">
-              <p class="text-3xl md:text-4xl font-heading font-bold text-primary-600">5</p>
-              <p class="text-sm text-gray-600 font-body">Step Approach</p>
+              <p class="text-3xl md:text-4xl font-heading font-bold text-primary-600">12</p>
+              <p class="text-sm text-gray-600 font-body">Week Program</p>
             </div>
           </div>
         </div>
@@ -100,48 +95,53 @@ const holisticAspects = siteConfig.bio.holisticAspects;
     </div>
   </section>
 
-  <!-- 5-Step Approach Section -->
+  <!-- What Makes Me Different Section -->
   <section id="method" class="py-14 md:py-24 bg-secondary-50" data-aos="fade-up">
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto text-center mb-12">
         <span class="inline-block text-primary-600 font-medium text-sm uppercase tracking-wider mb-3">
-          My Proven Method
+          My Approach
         </span>
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary-900">
-          The 5-Step Approach
+          What Makes Me Different
         </h2>
         <p class="mt-6 text-lg text-gray-700 font-body leading-relaxed">
           {differentiator}
         </p>
       </div>
 
-      <!-- 5-Step Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-        {approachItems.map((item, index) => (
-          <div
-            class={cn(
-              "bg-secondary-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300",
-              index >= 3 && "md:col-span-1 lg:col-span-1"
-            )}
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
-          >
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center text-white font-heading font-bold text-sm flex-shrink-0">
-                {index + 1}
-              </div>
-              <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">
-                <Fragment set:html={item.icon} />
-              </div>
-            </div>
-            <h3 class="text-xl font-heading font-semibold text-primary-900 mb-2">
-              {item.title}
-            </h3>
-            <p class="text-gray-600 font-body">
-              {item.description}
-            </p>
-          </div>
-        ))}
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-md">
+          <h3 class="text-xl font-heading font-semibold text-primary-900 mb-4">
+            I Help Clients With Issues Doctors Can't Explain
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-700 font-body">Fatigue with no real reason that doctors cannot define</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-700 font-body">A persistent cough that cannot be explained and no prescription works</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-700 font-body">Insomnia and no one can figure out why</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-700 font-body">Any ongoing health issue where a pill may not be the answer</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -154,23 +154,23 @@ const holisticAspects = siteConfig.bio.holisticAspects;
           Credentials
         </span>
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary-900">
-          My Certifications
+          My Certification
         </h2>
         <p class="mt-4 text-lg text-gray-700 font-body">
-          I bring a unique combination of healthcare expertise, leadership experience, and certified coaching skills to help you transform your life.
+          I bring specialized training in integrated health and functional medicine to help you find root-cause solutions.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="flex justify-center max-w-5xl mx-auto">
         {certifications.map((cert, index) => (
           <div
-            class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
+            class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 text-center max-w-sm"
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
             <div class="mb-4">
               <Badge variant={cert.variant} class="text-base px-4 py-2">
-                {cert.title.includes('(') ? cert.title.match(/\(([^)]+)\)/)?.[1] : cert.title.split(' ').map(w => w[0]).join('')}
+                {cert.label}
               </Badge>
             </div>
             <h3 class="text-lg font-heading font-semibold text-primary-900 mb-2">
@@ -195,14 +195,14 @@ const holisticAspects = siteConfig.bio.holisticAspects;
               My Philosophy
             </span>
             <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary-900 leading-tight">
-              A Holistic Approach to Sustainable Success
+              A Holistic Approach to Lasting Health
             </h2>
             <div class="mt-6 space-y-4 text-lg text-gray-700 font-body leading-relaxed">
               <p>
-                I firmly believe that all things are connected. True success comes from approaching health and life from a holistic perspective—considering every dimension of who you are.
+                I believe that true healing begins with understanding the root cause — not just masking symptoms with medication. My journey through the traditional medical system taught me that sometimes the answers lie outside conventional approaches.
               </p>
               <p>
-                Using Functional Health as a guiding principle, I help you examine and strengthen six key aspects of your life to bring about the sustainable results you seek.
+                Through functional medicine, I help you look at the whole picture and find solutions that address what's really going on in your body.
               </p>
             </div>
 
@@ -218,10 +218,9 @@ const holisticAspects = siteConfig.bio.holisticAspects;
 
           <div class="flex justify-center">
             <div class="relative rounded-2xl overflow-hidden shadow-xl w-full max-w-sm">
-              <!-- Photo by Valdhy Mbemba on Unsplash -->
               <img
-                src="/images/unsplash/wellness-2.jpg"
-                alt="Group wellness coaching session outdoors"
+                src="/images/unsplash/wellness-1.jpg"
+                alt="Holistic wellness and natural healing — representing Sandra Kramer's functional medicine approach"
                 width="1080" height="720"
                 decoding="async"
                 class="w-full object-cover"
@@ -229,13 +228,13 @@ const holisticAspects = siteConfig.bio.holisticAspects;
                 loading="lazy"
               />
               <!-- Overlaid quote -->
-              <div class="absolute inset-0 flex items-end" style="background: linear-gradient(to top, rgba(27,58,92,0.85) 50%, transparent 100%);">
+              <div class="absolute inset-0 flex items-end" style="background: linear-gradient(to top, rgba(59,85,64,0.85) 50%, transparent 100%);">
                 <blockquote class="p-6">
                   <p class="text-base font-heading font-medium italic leading-snug" style="color: #faf6ef;">
-                    "Approaching health holistically is the only true path to lasting success in every area of your life."
+                    "{siteConfig.bio.holisticQuote}"
                   </p>
                   <footer class="mt-2">
-                    <p class="text-sm font-body font-semibold" style="color: #C9A96E;">— {siteConfig.coach.name}</p>
+                    <p class="text-sm font-body font-semibold" style="color: #E8B4B8;">— {siteConfig.coach.name}</p>
                   </footer>
                 </blockquote>
               </div>

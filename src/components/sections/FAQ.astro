@@ -10,7 +10,7 @@ const faqs = siteConfig.faq;
       <span class="inline-block text-primary-600 font-body font-medium text-sm uppercase tracking-wider mb-3">
         Questions & Answers
       </span>
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold leading-tight" style="color: #1B3A5C; letter-spacing: -0.02em; line-height: 1.1;">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold leading-tight" style="color: #2a392d; letter-spacing: -0.02em; line-height: 1.1;">
         Frequently Asked <em class="not-italic text-primary-600">Questions</em>
       </h2>
       <p class="mt-4 text-lg font-body" style="color: #6b6b6b;">
@@ -22,7 +22,7 @@ const faqs = siteConfig.faq;
     <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
       <div class="space-y-4" id="faq-accordion">
         {faqs.map((faq, index) => (
-          <div class="rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow" style="border: 1px solid rgba(201,169,110,0.25);">
+          <div class="rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow" style="border: 1px solid rgba(122,158,126,0.25);">
             <button
               type="button"
               class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-inset"
@@ -30,10 +30,10 @@ const faqs = siteConfig.faq;
               aria-controls={`faq-answer-${index}`}
               id={`faq-question-${index}`}
             >
-              <span class="font-heading font-semibold text-base md:text-lg pr-4" style="color: #1B3A5C;">
+              <span class="font-heading font-semibold text-base md:text-lg pr-4" style="color: #2a392d;">
                 {faq.question}
               </span>
-              <span class="flex-shrink-0 transition-transform duration-200" style="color: #98D8AA;" aria-hidden="true">
+              <span class="flex-shrink-0 transition-transform duration-200" style="color: #E8B4B8;" aria-hidden="true">
                 <svg class="w-6 h-6 faq-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>

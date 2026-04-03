@@ -10,13 +10,13 @@ const services = siteConfig.servicesPreview;
     <!-- Section Header -->
     <div class="text-center max-w-2xl mx-auto mb-10 md:mb-14" data-aos="fade-up">
       <span class="inline-block font-body font-medium text-sm uppercase tracking-wider mb-3" style="color: #8b9e7c;">
-        Functional Medicine Coaching Programs
+        Health & Wellness Coaching Programs
       </span>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold leading-tight" style="color: #3b4535; letter-spacing: -0.02em; line-height: 1.1;">
         Programs to <em class="not-italic text-primary-600">Restore</em> Your Health
       </h2>
       <p class="mt-4 text-lg font-body" style="color: #6b6b6b;">
-        Root-cause thyroid and hormonal health coaching via video call, wherever you are.
+        Personalized health coaching via video call, wherever you are.
       </p>
     </div>
 
@@ -24,12 +24,12 @@ const services = siteConfig.servicesPreview;
     <div class="mb-8 md:mb-10 rounded-2xl overflow-hidden shadow-lg relative" data-aos="fade-up" data-aos-delay="50">
       <!-- Photo: generated AI wellness imagery -->
       <img
-        src="/images/generated/hero-variant-2.jpg"
-        alt="Wellness coaching session — restore your thyroid and hormonal health with Mariska Goebel"
-        width="1024" height="1024"
+        src="/images/generated/services-video-call.jpg"
+        alt="Wellness coaching session — personalized health and wellness coaching"
+        width="1024" height="768"
         decoding="async"
-        class="w-full object-cover object-top"
-        style="display: block; aspect-ratio: 2/1;"
+        class="w-full object-contain"
+        style="display: block; background-color: #faf6ef;"
         loading="lazy"
       />
       <div class="absolute inset-0 flex items-center" style="background: linear-gradient(to right, rgba(59,69,53,0.78) 0%, transparent 70%);">
@@ -38,7 +38,7 @@ const services = siteConfig.servicesPreview;
             Video Call Coaching
           </p>
           <p class="mt-1 md:mt-2 text-sm md:text-base font-body" style="color: #afc09e;">
-            Work with Mariska from anywhere
+            Work with your coach from anywhere
           </p>
         </div>
       </div>
@@ -53,14 +53,14 @@ const services = siteConfig.servicesPreview;
               ? 'border-2 md:scale-105 shadow-xl ring-2 md:-mt-2 hover:-translate-y-1 transition-all duration-300'
               : 'border-gray-100 hover:-translate-y-1 hover:shadow-xl transition-all duration-300'
           }`}
-          style={service.popular ? 'border-color: #C9A96E; ring-color: #C9A96E;' : ''}
+          style={service.popular ? 'border-color: #7A9E7E; ring-color: #7A9E7E;' : ''}
           data-aos="fade-up"
           data-aos-delay={index * 100}
         >
           {service.popular && (
             <div
               class="absolute -top-4 left-1/2 -translate-x-1/2 text-white text-xs font-body font-bold uppercase tracking-wider px-5 py-1.5 rounded-full shadow-md whitespace-nowrap"
-              style="background-color: #C9A96E;"
+              style="background-color: #7A9E7E;"
             >
               ⭐ Most Popular
             </div>
@@ -74,7 +74,7 @@ const services = siteConfig.servicesPreview;
             <div class="mb-4">
               <span
                 class={`inline-block text-2xl font-heading font-bold ${service.price === 'FREE' ? 'text-primary-600' : ''}`}
-                style={service.popular ? 'color: #C9A96E;' : ''}
+                style={service.popular ? 'color: #7A9E7E;' : ''}
               >
                 {service.price}
               </span>
